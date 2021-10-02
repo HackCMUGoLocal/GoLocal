@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head>  
   <meta charset="UTF-8">
-
-  <!-- Button -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 	
   <meta name="viewport" content="width=device_width" initial-scale="1.0">
   <title>GoLocal</title>
-  {% load static %}   
+  {% load static %}
+     
   <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
-  <link src="{% static 'js/index.js' %}"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="{% static 'js/index.js' %}"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-
+  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
-  <!-- Button -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
+  
 
 <section class="header">
   <nav>
@@ -33,6 +33,7 @@
     <div class="nav-links">
       <ul>
         <li><a href="">Home</a></li>
+        <li><a href="">Discover</a></li>
         <li><a href="">Login</a></li>
       </ul>
     </div>
@@ -44,32 +45,19 @@
     </div>
   </nav>
 
-  <!-- Button -->
-  <div class="button">
-    <button class="w3-button w3-xlarge w3-circle w3-white" onclick="location.href = 'form';">+</button>
-  </div>
-
-</section>
-
-
-  <div id="spacer"></div>
-
-  <div class="container">
-    <h1>Stores</h1>
-    <ul id="store_list">
-    </ul>
-  </div>
 
   <div class="container">
     <div class="row mt-5">
       <div class="col md-4">
         <div class="image-card">
           <div class="title">
-            <h2>Millie's Homemade Ice Cream | address here | Phone here</h2>
+            <h2>Millie's Homemade Ice Cream</h2>
           </div>
           <div class="divider"></div>
           <div class="excerpt">
-              <p>Choose your room light carefully. It can enlight your workspace or can cause you disaster!</p>
+              <p>Homemade Ice Cream: choose from a variety of flavors and support your local businesses</p>
+              <p>today! Sizes from only $3.99! Located in Shadyside.Sizes from only $3.99! Located in Shadyside.</p>
+              <p>Phone Number: 412-357-1314</p>
           </div>
           <div class="readmore">
               <a href="https://www.millieshomemade.com/" class="button button-readmore">Visit</a>
@@ -81,11 +69,11 @@
       <div class="col md-4">
         <div class="image-card">
           <div class="title">
-            <h2>Primanti Brothers</h2>
+            <h2>Katrina's Tapestries</h2>
           </div>
           <div class="divider"></div>
           <div class="excerpt">
-              <p>Description here</p>
+              <p>Buy homemmade tapestries for cheap! </p>
           </div>
           <div class="readmore">
               <a href="https://primantibros.com/" class="button button-readmore">Visit</a>
@@ -97,11 +85,12 @@
       <div class="col md-4">
         <div class="image-card">
           <div class="title">
-            <h2>Uncle Sam's Submarines | address | Phone </h2>
+            <h2>Uncle Sam's Submarines</h2>
           </div>
           <div class="divider"></div>
           <div class="excerpt">
-              <p>Description here</p>
+              <p>Catering subs to the Pittsburgh Community since 1999!</p>
+              <p>Come get your subs at Uncle Sam's Submarines today!</p>
           </div>
           <div class="readmore">
               <a href="https://www.unclesamssubs.com/index.php" class="button button-readmore">Visit</a>
@@ -113,11 +102,16 @@
 </section>
 <!-- 
 <h1>Stores</h1>
-
 <ul id="store_list">
 </ul>
-
 <form> 
   <label for="keyword">Search:</label><br>
   <input type="text" id="lname" name="lname">
 </form>
+--->
+
+<div class="butt">
+  <button class="w3-button w3-xlarge w3-circle w3-white" onclick="location.href = 'form';">+</button>
+</div>
+
+</body>

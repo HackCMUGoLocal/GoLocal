@@ -9,9 +9,9 @@
 	
   <meta name="viewport" content="width=device_width" initial-scale="1.0">
   <title>GoLocal</title>
-  {% load static %}   
-  <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
-  <link src="{% static 'js/index.js' %}"></script>
+     
+  <link href="/static/css/style.css" rel="stylesheet"> 
+  <link src="/static/js/index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -29,7 +29,7 @@
 
 <section class="header">
   <nav>
-    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
+    <a href="{% url 'index' %}"><img src="/static/images/logo.png" width="200" height="100" alt=""></a>
     <div class="nav-links">
       <ul>
         <li><a href="">Home</a></li>
@@ -52,7 +52,7 @@
     <div class="formgroup" id="website-form">
       <label for="website">Your Location</label>
       <input type="text" id="location" name="location" />
-  </div>
+    </div>
     
     <div class="formgroup" id="website-form">
         <label for="website">Phone Number</label>
@@ -69,15 +69,13 @@
       <label for="website">Hours of operation</label>
       <input type="text" id="hoo" name="hours" />
     </div>
-    
-    
-      <button type="submit" value="Submit" />
+      <input type="submit" value="Submit" />
     </form>
     </div>
 
   <!-- Button -->
-  <div class="button">
-    <button class="w3-button w3-xlarge w3-circle w3-white">+</button>
+  <div class="butt">
+    <button class="w3-button w3-xlarge w3-circle w3-white" onclick="location.href = 'form';">+</button>
   </div>
 
 </section>
