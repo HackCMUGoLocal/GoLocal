@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 
+
 # Create your views here.
 def mainPage(request):
   resp = requests.get(url="http://127.0.0.1:8000/stores")
