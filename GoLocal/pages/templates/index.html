@@ -8,7 +8,7 @@
   <title>GoLocal</title>
   {% load static %}   
   <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
-  <link src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'js/index.js' %}"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -22,21 +22,30 @@
   
 
 <section class="header">
-  <nav>
-    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
-    <div class="nav-links">
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Login</a></li>
-      </ul>
-    </div>
+  <div class="container">
+    <nav>
+      <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Login</a></li>
+        </ul>
+      </div>
 
-    <div class="wrapper">
-      <input type="text" class="input" 
-      placeholder="What are you looking for?">
-      <div class="searchbtn"><i class="fas fa-search"></i></div>
-    </div>
-  </nav>
+      <div class="wrapper">
+        <input type="text" class="input" 
+        placeholder="What are you looking for?">
+        <div class="searchbtn"><i class="fas fa-search"></i></div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <h1>Stores</h1>
+    <ul id="store_list">
+    </ul>
+  </div>
+
 </section>
 
 <!-- 
