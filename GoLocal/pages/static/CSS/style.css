@@ -6,6 +6,18 @@
 	box-sizing: border-box;
 }
 
+#spacer {
+  height: 100px;
+}
+
+.store {
+  background-color: aqua;
+  color: black;
+  padding: 10px;
+  margin: 10px;
+  outline: auto;
+}
+
 .header{
   min-height: 100vh;
   width: 100%;
@@ -15,6 +27,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+
+h1 {
+  color: white;
 }
 
 nav{

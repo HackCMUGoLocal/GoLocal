@@ -92,6 +92,7 @@ function addStore(store) {
 function createTile(name, address, website) {
 
   const li = document.createElement("li");
+  li.className = "store";
   const header = document.createElement("h2");
   li.appendChild(header);
   const headerText = document.createTextNode(name + " | " + address + " | " + website);
