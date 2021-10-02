@@ -63,3 +63,29 @@ def getProduct(request, pk):
   product = Product.objects.get(id=pk)
   serializer2 = ProductSerializer(product, many=False)
   return Response(serializer2.data)
+
+@api_view(['POST'])
+def createStore(request):
+  data = request.data
+  store = Store.objects.create(
+    name = data['name']
+    location = data['location']
+    phone = data['phone']
+    website = data['website']
+    hoursOfOperation = data['hoursOfOperation']
+  )
+  serializer = StoreSerializer(store, many=False)
+  return Response(serializer.data)
+
+@api_view(['POST'])
+def createProduct(request):
+  data = request.data
+  product = Product.objects.create(
+    name = data['name']
+    price = data['price']
+    store = data['store']
+  )
+  serializer = StoreSerializer(product, many=False)
+  return Response(serializer.data)
+
+
