@@ -68,10 +68,10 @@ def getProduct(request, pk):
 def createStore(request):
   data = request.data
   store = Store.objects.create(
-    name = data['name']
-    location = data['location']
-    phone = data['phone']
-    website = data['website']
+    name = data['name'],
+    location = data['location'],
+    phone = data['phone'],
+    website = data['website'],
     hoursOfOperation = data['hoursOfOperation']
   )
   serializer = StoreSerializer(store, many=False)
@@ -81,8 +81,8 @@ def createStore(request):
 def createProduct(request):
   data = request.data
   product = Product.objects.create(
-    name = data['name']
-    price = data['price']
+    name = data['name'],
+    price = data['price'],
     store = data['store']
   )
   serializer = StoreSerializer(product, many=False)
