@@ -3,4 +3,4 @@ import requests
 
 
 # Create your views here.
-def mainPage(request):return render(request)
+def mainPage(request):return render(request, 'index.html')
