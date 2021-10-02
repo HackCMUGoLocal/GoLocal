@@ -88,4 +88,14 @@ def createProduct(request):
   serializer = StoreSerializer(product, many=False)
   return Response(serializer.data)
 
+@api_view(['DELETE'])
+def deleteStore(request, pk):
+  store = Store.objects.get(id=pk)
+  store.delete()
+  return Response('Store was deleted!')
 
+@api_view(['DELETE'])
+def deleteProduct(request, pk):
+  product = Product.objects.get(id=pk)
+  product.delete()
+  return Response('Product was deleted!')
