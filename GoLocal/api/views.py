@@ -79,6 +79,10 @@ def createStore(request):
 
 @api_view(['POST'])
 def createProduct(request):
+  # If product exists, update price and stores
+
+  # Otherwise create new
+
   data = request.data
   product = Product.objects.create(
     name = data['name'],
