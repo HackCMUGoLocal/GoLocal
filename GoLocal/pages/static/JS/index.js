@@ -40,7 +40,7 @@ async function postRequest(url, body) {
 
   requestPromise = new Promise((resolve, reject) => {
     const Http = new XMLHttpRequest();
-    Http.open("GET", url);
+    Http.open("POST", url);
     Http.send();
 
     Http.onreadystatechange = (e) => {
@@ -126,8 +126,11 @@ async function defaultStores() {
   setStores(stores);
 }
 
+async function search() {
+  // category 
+}
+
 async function makeStore() {
-  
   nam = document.getElementById('name').value;
   locaiton = document.getElementById('location').value;
   website = document.getElementById('website').value;
@@ -136,7 +139,15 @@ async function makeStore() {
 
   body = {'name':nam, 'location':location, 'website':website, 'phone':phone, 'hoursOfOperation':hoo};
   console.log("HELLO?");
-  postRequest("127.0.0.1:8000/stores/create", json.dumps(body));
+  postRequest("stores/create/", JSON.stringify(body));
+}
+
+function logSubmit(event) {
+  console.log(`Form Submitted! Time stamp: ${event.timeStamp}`);
+  document.getElementById('website').appendChild(document.createElement("h1").appendChild(document.createTextNode("Hello")));
+  event.preventDefault();
 }
 
 defaultStores();
+
+console.log("Hey there");

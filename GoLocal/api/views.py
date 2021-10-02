@@ -1,40 +1,42 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializeStore import StoreSerializer
+from django.views.decorators.csrf import csrf_exempt
 from .models import Store
 
 @api_view(['GET'])
 def getRoutes(request):
   routes = [
     {
-      'Endpoint': '\city',
+      'Endpoint': '\stores',
       'method': 'GET',
       'body': None,
-      'description': 'Returns local businesses in a city'
+      'description': 'Returns local businesses'
     },
     {
-      'Endpoint': '\keyword',
+      'Endpoint': '\store\<int:pk>',
       'method': 'GET',
       'body': None,
-      'description': 'Returns local businesses from a keyword'
+      'description': 'Returns local businesses where id=pk'
     },
     {
-      'Endpoint': '\store',
-      'method': 'GET',
-      'body': None,
-      'description': 'Returns information about a store'
-    },
-    {
-      'Endpoint': '\store',
+      'Endpoint': '\store\create',
       'method': 'POST',
       'body': {
         'name': "",
         'location': "",
         'phone': "",
         'website': "",
-        'hoursOfOperation': "", 
+        'hoursOfOperation':"",
+        'category': "",
       },
-      'description': 'Creates a new store'
+      'description': 'Creates a new store with given body data'
+    },
+    {
+      'Endpoint': '\store\<int:pk>',
+      'method': 'DELETE',
+      'body': None,
+      'description': 'Deletes store with id=pk'
     },
   ]
   return Response(routes)
