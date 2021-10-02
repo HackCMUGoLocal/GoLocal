@@ -109,3 +109,101 @@ body{
     transform: translate(-50%, -50%);
     font-size: 18px;
 }
+
+.button{
+  position : fixed;
+    top: 87%;
+    left: 90%;
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+}
+
+h1{
+  padding: 100px 300px;
+  width:90%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1px;
+  font-family: 'Monsterrat', sans-serif;
+}
+
+#form{
+  height: 100%; 
+  overflow: hidden;
+  position: relative;
+  padding-top: 120px;
+  
+}
+form{
+  margin: 0 auto;
+  width: 500px;
+  padding-top: 0px;
+  color: white;
+  position: relative;
+  
+  
+}
+label, input, textarea{
+  display: block; 
+}
+input, textarea{
+  width: 500px; 
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px;
+  font-family: 'Sniglet', cursive;
+  font-size: 1em;
+  color: #676767;
+  transition: border 0.5s;
+  -webkit-transition: border 0.5s;
+  -moz-transition: border 0.5s;
+  -o-transition: border 0.5s; 
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  
+}
+input:focus, textarea:focus{
+  border: solid 3px #77bde0;  
+}
+
+textarea{
+  height: 100px;  
+  resize: none; 
+  overflow: auto;
+}
+input[type="submit"]{
+  background-color: #F90;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 1.29em;
+  font-family: 'Sniglet', cursive;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+input[type="submit"]:hover{
+  background-color: #e58f0e;
+  
+}
+label{
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.formgroup, .formgroup-active, .formgroup-error{
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 10.5%;
+  transition: background-image 0.7s;
+  -webkit-transition: background-image 0.7s;
+  -moz-transition: background-image 0.7s;
+  -o-transition: background-image 0.7s;
+  width: 566px;
+  padding-top: 2px;
+}
