@@ -23,3 +23,10 @@ function getStoresHaving(productName) {
   }
   return stores;
 }
+
+function JS2HTML() {
+  var ul = document.getElementById("store_list");
+  var li = document.createElement("li");
+  li.appendChild(document.createTextNode(Store.name));
+  ul.appendChild(li);
+}
