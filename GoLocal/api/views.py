@@ -85,6 +85,8 @@ def createProduct(request):
     price = data['price'],
     store = data['store'] #WRONG!
   )
+  shop = Store.objects.get(name=data['store'])
+  product.store.add(shop)
   serializer = StoreSerializer(product, many=False)
   return Response(serializer.data)
 
