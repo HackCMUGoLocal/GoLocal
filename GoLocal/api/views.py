@@ -41,13 +41,25 @@ def getRoutes(request):
   return Response(routes)
 
 @api_view(['GET'])
-def getStore(request):
+def getStores(request):
   stores = Store.objects.all()
   serializer = StoreSerializer(stores, many=True)
   return Response(serializer.data)
 
 @api_view(['GET'])
-def getProduct(request):
+def getStore(request, pk):
+  store = Store.objects.get(id=pk)
+  serializer = StoreSerializer(store, many=False)
+  return Response(serializer.data)
+
+@api_view(['GET'])
+def getProducts(request):
   products = Product.objects.all()
   serializer2 = ProductSerializer(products, many=True)
+  return Response(serializer2.data)
+
+@api_view(['GET'])
+def getProduct(request, pk):
+  product = Product.objects.get(id=pk)
+  serializer2 = ProductSerializer(product, many=False)
   return Response(serializer2.data)
