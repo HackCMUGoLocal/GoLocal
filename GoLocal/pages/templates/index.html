@@ -2,14 +2,25 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device_width" initial-scale="1.0">
+  <title>GoLocal</title>
   {% load static %}  
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
   <script src="{% static 'js/style.js' %}"></script>
 </head>
 
 <body>
-
-<h1>White Page</h1>
+<section class="header">
+  <nav>
+    <p>{% load static %}<img src="{% static 'images/logo.png.png' %}"></p>
+    <div class="nav-links">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</section>
 
 <form>
   <label for="keyword">Search:</label><br>
