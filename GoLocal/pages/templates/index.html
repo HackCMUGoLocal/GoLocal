@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -51,4 +52,57 @@
 -->
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+	
+  <meta name="viewport" content="width=device_width" initial-scale="1.0">
+  <title>GoLocal</title>
+  {% load static %}  
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+
+<section class="header">
+  <nav>
+    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png.png' %}" width="150" height="100" alt=""></a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </div>
+
+    <div class="wrapper">
+      <input type="text" class="input" 
+      placeholder="What are you looking for?">
+      <div class="searchbtn"><i class="fas fa-search"></i></div>
+    </div>
+  </nav>
+</section>
+
+<h1>Stores</h1>
+
+<ul id="store_list">
+</ul>
+
+<form>
+  <label for="keyword">Search:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+</body>
+>>>>>>> b2296fb82ce29a25ea27b9e927e6b6535ca7549e
 </html>
