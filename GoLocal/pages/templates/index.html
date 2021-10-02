@@ -6,13 +6,15 @@
   <title>GoLocal</title>
   {% load static %}  
   <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <script src="{% static 'js/style.js' %}"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <section class="header">
   <nav>
-    <p>{% load static %}<img src="{% static 'images/logo.png.png' %}"></p>
+    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png.png' %}" width="150" height="100" alt=""></a>
     <div class="nav-links">
       <ul>
         <li><a href="">Home</a></li>
@@ -21,11 +23,6 @@
     </div>
   </nav>
 </section>
-
-<form>
-  <label for="keyword">Search:</label><br>
-  <input type="text" id="key" name="key">
-</form>
 
 <h1>Stores</h1>
 <ul>
@@ -40,6 +37,11 @@
     <li>{{ product.name }}</li>
 {% endfor %}
 </ul>
+
+<form>
+  <label for="keyword">Search:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
 
 </body>
 </html>
