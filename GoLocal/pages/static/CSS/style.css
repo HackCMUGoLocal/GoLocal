@@ -71,14 +71,15 @@ body{
 }
 
 .wrapper{
-	position: absolute;
+	position: fixed;
     top: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0,0.6);
+    transform: translate(-50%, -40%);
+    /* background: rgba(0, 0, 0,0); */
     max-width: 600px; /* was 550 */
+    max-height: 40px;
     width: 100%;
-    padding: 15px;
+    /* padding: 15px; */
     display: flex;
     justify-content: space-between;
     border-radius: 5px;
@@ -88,14 +89,15 @@ body{
     width: 85%;
     padding: 15px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     font-weight: bold;
+    background:#ebebeb;
 }
 
 .searchbtn {
-    background: #ffffff;
+    background:#ebebeb;
     width: 10%;
-    border-radius: 5px;
+    border-radius: 10px;
     position: relative;
     cursor: pointer;
 }
