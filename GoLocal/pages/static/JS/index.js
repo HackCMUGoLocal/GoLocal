@@ -126,4 +126,17 @@ async function defaultStores() {
   setStores(stores);
 }
 
+async function makeStore() {
+  
+  nam = document.getElementById('name').value;
+  locaiton = document.getElementById('location').value;
+  website = document.getElementById('website').value;
+  phone = document.getElementById('phone').value;
+  hoo = document.getElementById('hoo').value;
+
+  body = {'name':nam, 'location':location, 'website':website, 'phone':phone, 'hoursOfOperation':hoo};
+  console.log("HELLO?");
+  postRequest("127.0.0.1:8000/stores/create", json.dumps(body));
+}
+
 defaultStores();
