@@ -6,9 +6,9 @@
 	
   <meta name="viewport" content="width=device_width" initial-scale="1.0">
   <title>GoLocal</title>
-  {% load static %}  
-  <link href="{% static 'css/style.css' %}" rel="stylesheet">
-  <script src="{% static 'js/index.js' %}"></script>
+  {% load static %}   
+  <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
+  <link src="{% static 'js/index.js' %}"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -23,7 +23,7 @@
 
 <section class="header">
   <nav>
-    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png.png' %}" width="150" height="100" alt=""></a>
+    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
     <div class="nav-links">
       <ul>
         <li><a href="">Home</a></li>
@@ -39,15 +39,16 @@
   </nav>
 </section>
 
-<h1>Stores</h1>
+<!-- <h1>Stores</h1>
 
 <ul id="store_list">
-</ul>
+</ul> -->
 
-<form>
+<!-- <form>
   <label for="keyword">Search:</label><br>
   <input type="text" id="lname" name="lname">
-</form>
+</form> -->
 
 </body>
+
 </html>
