@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device_width" initial-scale="1.0">
   <title>GoLocal</title>
   {% load static %}   
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"> 
+  <link href="{% static 'css/style.css' %}" rel="stylesheet"> 
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
   <script src="{% static 'js/index.js' %}"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,23 +21,22 @@
   
 
 <section class="header">
-  <div class="container">
-    <nav>
-      <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
-      <div class="nav-links">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Login</a></li>
-        </ul>
-      </div>
+  <nav>
+    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" width="200" height="100" alt=""></a>
+    <div class="nav-links">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Discover</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </div>
 
-      <div class="wrapper">
-        <input type="text" class="input" 
-        placeholder="What are you looking for?">
-        <div class="searchbtn"><i class="fas fa-search"></i></div>
-      </div>
-    </nav>
-  </div>
+    <div class="wrapper">
+      <input type="text" class="input" 
+      placeholder="What are you looking for?">
+      <div class="searchbtn"><i class="fas fa-search"></i></div>
+    </div>
+  </nav>
 
   <div id="spacer"></div>
 
@@ -46,8 +46,57 @@
     </ul>
   </div>
 
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col md-4">
+        <div class="image-card">
+          <div class="title">
+            <h2>Millie's Homemade Ice Cream | address here | Phone here</h2>
+          </div>
+          <div class="divider"></div>
+          <div class="excerpt">
+              <p>Choose your room light carefully. It can enlight your workspace or can cause you disaster!</p>
+          </div>
+          <div class="readmore">
+              <a href="https://www.millieshomemade.com/" class="button button-readmore">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col md-4">
+        <div class="image-card">
+          <div class="title">
+            <h2>Primanti Brothers</h2>
+          </div>
+          <div class="divider"></div>
+          <div class="excerpt">
+              <p>Description here</p>
+          </div>
+          <div class="readmore">
+              <a href="https://primantibros.com/" class="button button-readmore">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col md-4">
+        <div class="image-card">
+          <div class="title">
+            <h2>Uncle Sam's Submarines | address | Phone </h2>
+          </div>
+          <div class="divider"></div>
+          <div class="excerpt">
+              <p>Description here</p>
+          </div>
+          <div class="readmore">
+              <a href="https://www.unclesamssubs.com/index.php" class="button button-readmore">Visit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 <!-- 
 <h1>Stores</h1>
 
@@ -58,6 +107,6 @@
   <label for="keyword">Search:</label><br>
   <input type="text" id="lname" name="lname">
 </form>
--->
+--->
 
 </body>

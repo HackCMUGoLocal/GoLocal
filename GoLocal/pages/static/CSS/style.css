@@ -21,12 +21,6 @@
 .header{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/background.jpeg);
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
 }
 
 h1 {
@@ -80,10 +74,14 @@ nav img {
 }
 
 body{
-	background: url('https://i.imgur.com/NMnbn2s.jpg') no-repeat center;
-	background-size: cover;
 	width: 100%;
-	height: 100vh;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/background.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .wrapper{
@@ -124,4 +122,98 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
+}
+
+.container{
+  position: absolute;
+  overflow-y:auto;
+  max-width: 80%;
+  transform: translate(12.5%, 50%);
+}
+
+.image-card {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: #FFF9F9;
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+  overflow: hidden;
+}
+.image-card:hover {
+  box-shadow: 0 0.1rem .8rem rgba(36,36,36,.1);
+  transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+}
+.image-card .image {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  max-width: 80%;
+  height: 10px;
+  z-index: 0;
+}
+.image-card .content {
+  padding: 40px 40px;
+}
+.image-card .content p:last-child {
+  margin-bottom: 0px;
+}
+.image-card .title {
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.image-card .title h2 {
+  font-size: 23px;
+  font-weight: 500;
+  color: #111;
+  line-height: 30px;
+  margin: 0;
+}
+.image-card .divider {
+  position: relative;
+  width: 100px;
+  height: 2px;
+  background-color: rgba( 0,0,0,0.05 );
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 0;
+}
+.image-card .excerpt {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #707070;
+  line-height: 27px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.image-card .readmore {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.image-card .readmore a.button-readmore {
+  display: inline-block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  text-decoration: none;
+  background-color: #562dd4;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+.image-card .readmore a.button-readmore:hover {
+  background-color: #707070;
+  color: #fff;
 }
