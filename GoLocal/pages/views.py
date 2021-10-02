@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 
+
 # Create your views here.
 def mainPage(request):
   resp = '[{"id":1,"name":"Giant Eagle","location":"123 Main St, Pittsburgh, Pennsylvania","phone":"1234567890","website":"gianteagle.com","hoursOfOperation":10},{"id":3,"name":"Target","location":"123 Main St, Pittsburgh, Pennsylvania","phone":"1234567890","website":"gianteagle.com","hoursOfOperation":10}]'
