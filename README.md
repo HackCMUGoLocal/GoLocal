@@ -1,2 +1,2 @@
 # GoLocal
-Hack CMU Go Local Project
+GoLocal: HackCMU Project
