@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% load static %}  
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<h1>White Page</h1>
+
+<form>
+  <label for="keyword">Search:</label><br>
+  <input type="text" id="lname" name="lname">
+</form>
+
+<h1>Stores</h1>
+<ul>
+{% for store in store_list %}
+    <li>{{ store.name }}</li>
+{% endfor %}
+</ul>
+
+<h1>Products</h1>
+<ul>
+{% for product in product_list %}
+    <li>{{ product.name }}</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>
