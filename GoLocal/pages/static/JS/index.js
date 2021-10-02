@@ -26,6 +26,34 @@ async function getRequest(url) {
   return requestPromise
 }
 
+// Return json string from given url
+async function postRequest(url, body) {
+  resolve = (responseText) => responseText;
+
+  requestPromise = new Promise((resolve, reject) => {
+    const Http = new XMLHttpRequest();
+    Http.open("POST", url);
+    Http.send(body);
+
+    Http.onreadystatechange = (e) => {
+      // In local files, status is 0 upon success in Mozilla Firefox
+      if(Http.readyState === XMLHttpRequest.DONE) {
+        var status = Http.status;
+        if (status === 0 || (status >= 200 && status < 400)) {
+          // The request has been completed successfully
+          console.log(Http.responseText);
+          resolve(Http.responseText);
+        } else {
+          // Oh no! There has been an error with the request!
+          reject();
+        }
+      }
+    }
+  });
+
+  return requestPromise
+}
+
 // Returns a parsed list of store dictionaries
 async function getAllStores(resolve) {
   // Returns list of stores
@@ -64,4 +92,7 @@ function addStores(stores) {
   });
 }
 
-stores = getAllStores(addStores);
+
+
+// Initialization
+getAllStores(addStores);
