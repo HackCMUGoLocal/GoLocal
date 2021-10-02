@@ -1,8 +1,7 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializeStore import StoreSerializer
-from .serializeProduct import ProductSerializer
-from .models import Store, Product 
+from .models import Store
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -52,18 +51,6 @@ def getStore(request, pk):
   serializer = StoreSerializer(store, many=False)
   return Response(serializer.data)
 
-@api_view(['GET'])
-def getProducts(request):
-  products = Product.objects.all()
-  serializer2 = ProductSerializer(products, many=True)
-  return Response(serializer2.data)
-
-@api_view(['GET'])
-def getProduct(request, pk):
-  product = Product.objects.get(id=pk)
-  serializer2 = ProductSerializer(product, many=False)
-  return Response(serializer2.data)
-
 @api_view(['POST'])
 def createStore(request):
   data = request.data
@@ -72,25 +59,10 @@ def createStore(request):
     location = data['location'],
     phone = data['phone'],
     website = data['website'],
-    hoursOfOperation = data['hoursOfOperation']
+    hoursOfOperation = data['hoursOfOperation'],
+    category = data['category'],
   )
   serializer = StoreSerializer(store, many=False)
-  return Response(serializer.data)
-
-@api_view(['POST'])
-def createProduct(request):
-  # If product exists, update price and stores
-
-  # Otherwise create new
-
-  data = request.data
-  product = Product.objects.create(
-    name = data['name'],
-    price = data['price'],
-  )
-  shop = Store.objects.get(name=data['store'])
-  product.store.add(shop)
-  serializer = ProductSerializer(product, many=False)
   return Response(serializer.data)
 
 @api_view(['DELETE'])
@@ -99,8 +71,3 @@ def deleteStore(request, pk):
   store.delete()
   return Response('Store was deleted!')
 
-@api_view(['DELETE'])
-def deleteProduct(request, pk):
-  product = Product.objects.get(id=pk)
-  product.delete()
-  return Response('Product was deleted!')
